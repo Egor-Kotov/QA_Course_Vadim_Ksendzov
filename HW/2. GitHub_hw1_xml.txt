@@ -1,0 +1,116 @@
+ 21. Создать внешний репозиторий c названием XML.
+заходим в репозитории жмякаем new 
+
+ 22. Клонировать репозиторий XML на локальный компьютер.
+git clone https://github.com/Egor-Kotov/XML.git
+
+ 23. Внутри локального XML создать файл “new.xml”.
+cd xml/ ; touch new.xml
+
+ 24. Добавить файл под гит.
+git add .
+
+ 25. Закоммитить файл.
+git cimmit -am "egor.kotov"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+git push
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+<?xml version="1.0" encoding="UTF-8" ?>
+<aboutme>
+    <fullname>Kotov Egor Nikolaevich</fullname>
+    <age>28</age>
+    <pets>
+        <Number_of_pets>1</Number_of_pets>
+        <Type_of_pet>cat</Type_of_pet>
+        <Name>Smoke</Name>
+    </pets>
+    <salary>3000$</salary>
+</aboutme>
+
+ 28. Отправить изменения на внешний репозиторий.
+git add . ; git commit -am "xml"; git push
+
+ 29. Создать файл preferences.xml
+touch preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+vi preferences.xml ; I ;
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <preferences>
+        <film>Scent of a Woman</film>
+        <serial>Firefly</serial>
+        <favorite_dish>Spaghetti</favorite_dish>
+        <favorite_season>Winter</favorite_season>
+        <travel_wish>Sweden</travel_wish>
+    </preferences>
+</root> ; ESC ; :wq
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+touch skills.xml ; vi skills.xml ; I ;
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <Course_program>1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC
+2. Что такое клиент серверная архитектура.
+3. Методы запросов на сервер.
+4. Ответы сервера.
+5. Структуры запросов и ответов.
+6. Что такое JSON, XML. Их структура.
+7. Тестирование API.
+8. Снятие и чтение логов.
+9. Postman, Fidler.
+10. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)
+11. Dev Tools веб браузеров (Google Chrome, FireFox).
+12. Мобильное тестирование.
+13. Особенность iOS, Android, гайдлайны.
+14. Сборка iOS приложений на XCode
+15. Сборка Android приложений на Android Studio
+16. Перехват мобильного трафика (сниффинг) через Charles
+17. Настройка прокси на iOS и Android.
+18. Командная строка (terminal) Linux Ubuntu. Копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса.
+19. Простой bash скриптринг , автоматизация рутинных задач на сервере.
+20. Доступ к удалённым серверам.
+21. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join
+22. Git
+23. Jmeter
+24. Методология разработки Scrum
+25. Python. Создание собственного клиент-серверного приложения.</Course_program>
+</root> ; ESC ; :wq
+
+ 32. Сделать коммит в одну строку.
+git add . ; git commit -am "ho4u spat"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+кнопка 'add file' - 'create new file'
+
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Зеленая кнопка 'Commit changes'
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+иконка карандаш 'Edit this file' ; 
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <BugReport>
+        <Title>Ближайшая машина в виде транспорта 'каршеринг' не отображается на навигационной карте</Title>
+        <Steps_to_reproduce>1. Перейти на тестовый стенд Яндекс. Маршруты
+2. Ввести в поле Откуда 'Хамовнический вал, 18'
+3. Ввести в поле Куда 'Усачева, 3'
+4. Выбрать режим Свой
+5. Выбрать вид транспорта Каршеринг
+6. Нажать на кнопку 'Забронировать'
+7. Посмотреть на карту</Steps_to_reproduce>
+        <Expected_Result>На карте иконка ближайшей машины (при выборе тарифа) увеличивается, над ней появляется чёрная плашка с маркой машины</Expected_Result>
+        <Actual_Result>Иконки машин, не реагируют на смену тарифа, черная плашка ближайшей машины отсутствует</Actual_Result>
+        <Environment>win 10, Firefox 94.0., также воспроизводится на win 10, Я.Браузер 21.11.1.932</Environment>
+    </BugReport>
+</root>
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+комент ; Зеленая кнопка 'Commit changes'
+
+ 38. Синхронизировать внешний и локальный репозиторий XML
+git fetch (посмотреть что все ровно, безопасная команда) ; git pull
