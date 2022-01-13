@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "cf282bee-894a-4c9e-9486-7c1d51636345",
+		"name": "Вадим.Ксендзов_QA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1_GET_ep : /get_method",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ksendzov}}/get_method?name=Alice&age=6",
+					"host": [
+						"{{ksendzov}}"
+					],
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Alice"
+						},
+						{
+							"key": "age",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2_POST_ep : /user_info_3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Alena",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "29",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "30000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ksendzov}}/user_info_3",
+					"host": [
+						"{{ksendzov}}"
+					],
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3_GET_ep : /object_info_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ksendzov}}/object_info_1?name=Egor&age=29&weight=95",
+					"host": [
+						"{{ksendzov}}"
+					],
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Egor"
+						},
+						{
+							"key": "age",
+							"value": "29"
+						},
+						{
+							"key": "weight",
+							"value": "95"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4_GET_ep : /object_info_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ksendzov}}/object_info_2?name=Egor&age=29&salary=70000",
+					"host": [
+						"{{ksendzov}}"
+					],
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Egor"
+						},
+						{
+							"key": "age",
+							"value": "29"
+						},
+						{
+							"key": "salary",
+							"value": "70000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5_GET_ep : /object_info_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ksendzov}}/object_info_3?name=Nikolai&age=0.5&salary=1",
+					"host": [
+						"{{ksendzov}}"
+					],
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikolai"
+						},
+						{
+							"key": "age",
+							"value": "0.5"
+						},
+						{
+							"key": "salary",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6_GET_ep : /object_info_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ksendzov}}/object_info_4?name=Sergey&age=51&salary=60000",
+					"host": [
+						"{{ksendzov}}"
+					],
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sergey"
+						},
+						{
+							"key": "age",
+							"value": "51"
+						},
+						{
+							"key": "salary",
+							"value": "60000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7_POST_ep : //user_info_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Egor",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "29",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "100000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ksendzov}}/user_info_2",
+					"host": [
+						"{{ksendzov}}"
+					],
+					"path": [
+						"user_info_2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
