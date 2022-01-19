@@ -9,7 +9,7 @@ CREATE TABLE employees (
 );
 
 INSERT INTO employees(employee_name)
-VALUES  ('Egor Kotov'),
+VALUES          ('Egor Kotov'),
 		('Sergey Kartauz'),
 		('Stanislav Budnukov'),
 		('Alena Ignatenko'),
@@ -108,7 +108,7 @@ CREATE TABLE salary (
 );
 
 INSERT INTO salary(monthly_salary)
-VALUES  (1000),
+VALUES          (1000),
 		(1100),
 		(1200),
 		(1300),
@@ -140,10 +140,10 @@ CREATE TABLE employee_salary (
 );		
 
 INSERT INTO employee_salary(employee_id, salary_id) 
-VALUES  (1, 16),
-        (2, 1),
-        (3, 2),
-        (10, 1),
+VALUES          (1, 16),
+                (2, 1),
+                (3, 2),
+                (10, 1),
 		(11,2),
 		(12, 3),
 		(14, 4),
@@ -200,7 +200,7 @@ ALTER TABLE roles
 ALTER column role_name TYPE varchar(30);
 
 INSERT INTO roles(role_name)
-VALUES ('Junior Python developer'),
+VALUES     ('Junior Python developer'),
 	   ('Middle Python developer'),
 	   ('Senior Python developer'),
 	   ('Junior Java developer'),
@@ -239,7 +239,7 @@ CREATE TABLE roles_employee(
 	  );
 	 
 INSERT INTO roles_employee(employee_id, role_id)
-VALUES (1, 20),
+VALUES     (1, 20),
 	   (2, 19),
 	   (3, 18),
 	   (4, 17),
