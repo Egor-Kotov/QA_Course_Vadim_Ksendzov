@@ -140,7 +140,10 @@ CREATE TABLE employee_salary (
 );		
 
 INSERT INTO employee_salary(employee_id, salary_id) 
-VALUES (10, 1),
+VALUES  (1, 16),
+        (2, 1),
+        (3, 2),
+        (10, 1),
 		(11,2),
 		(12, 3),
 		(14, 4),
