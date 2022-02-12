@@ -1,15 +1,15 @@
 --Создать таблицу employees
---- id. SERIAL,  PRIMARY KEY,
---- employee_name. Varchar(50), NOT NULL
+--- id. serial,  primary key,
+--- employee_name. Varchar(50), not null
 --Наполнить таблицу employee 70 строками.
 
-CREATE TABLE employees (
-	id SERIAL PRIMARY KEY,
-	employee_name varchar(50) NOT NULL
+create table employees (
+	id serial primary key,
+	employee_name varchar(50) not null
 );
 
-INSERT INTO employees(employee_name)
-VALUES          ('Egor Kotov'),
+insert into employees(employee_name)
+values  ('Egor Kotov'),
 		('Sergey Kartauz'),
 		('Stanislav Budnukov'),
 		('Alena Ignatenko'),
@@ -82,8 +82,8 @@ VALUES          ('Egor Kotov'),
  
 
 --Создать таблицу salary
---- id. Serial  PRIMARY KEY,
---- monthly_salary. int, NOT NULL
+--- id. Serial  primary key,
+--- monthly_salary. Int, not null
 --Наполнить таблицу salary 15 строками:
 --- 1000
 --- 1100
@@ -102,13 +102,13 @@ VALUES          ('Egor Kotov'),
 --- 2400
 --- 2500
 
-CREATE TABLE salary (
-	id SERIAL PRIMARY KEY,
-	monthly_salary int NOT NULL
+create table salary (
+	id serial primary key,
+	monthly_salary int not null
 );
 
-INSERT INTO salary(monthly_salary)
-VALUES          (1000),
+insert into salary(monthly_salary)
+values  (1000),
 		(1100),
 		(1200),
 		(1300),
@@ -127,23 +127,20 @@ VALUES          (1000),
 	
 
 --Создать таблицу employee_salary
---- id. Serial  PRIMARY KEY,
---- employee_id. int, NOT NULL, UNIQUE
---- salary_id. int, NOT NULL
+--- id. Serial  primary key,
+--- employee_id. Int, not null, unique
+--- salary_id. Int, not null
 --Наполнить таблицу employee_salary 40 строками:
 --- в 10 строк из 40 вставить несуществующие employee_id
 
-CREATE TABLE employee_salary (
-	id SERIAL PRIMARY KEY,
-	employee_id int NOT NULL UNIQUE,
-	salary_id int NOT NULL
+create table employee_salary (
+	id serial primary key,
+	employee_id int not null unique,
+	salary_id int not null
 );		
 
-INSERT INTO employee_salary(employee_id, salary_id) 
-VALUES          (1, 16),
-                (2, 1),
-                (3, 2),
-                (10, 1),
+insert into employee_salary(employee_id, salary_id) 
+values  (10, 1),
 		(11,2),
 		(12, 3),
 		(14, 4),
@@ -184,23 +181,23 @@ VALUES          (1, 16),
 		(79,6),
 		(80,5);
 	
-	
+select 	* from 	employee_salary;
 --Создать таблицу roles
---- id. Serial  PRIMARY KEY,
---- role_name. int, NOT NULL, UNIQUE
+--- id. Serial  primary key,
+--- role_name. int, not null, unique
 --Поменять тип столба role_name с int на varchar(30)
 --Наполнить таблицу roles 20 строками:
 
-CREATE TABLE roles (
-	id SERIAL PRIMARY KEY,
-	role_name int NOT NULL UNIQUE
+create table roles (
+	id serial primary key,
+	role_name int not null unique
 );
 
-ALTER TABLE roles
-ALTER column role_name TYPE varchar(30);
+alter table roles
+alter column role_name type varchar(30);
 
-INSERT INTO roles(role_name)
-VALUES     ('Junior Python developer'),
+insert into roles(role_name)
+values ('Junior Python developer'),
 	   ('Middle Python developer'),
 	   ('Senior Python developer'),
 	   ('Junior Java developer'),
@@ -223,23 +220,23 @@ VALUES     ('Junior Python developer'),
 	   
 
 --Создать таблицу roles_employee
---- id. Serial  PRIMARY KEY,
---- employee_id. int, NOT NULL, UNIQUE (внешний ключ для таблицы employees, поле id)
---- role_id. int, NOT NULL (внешний ключ для таблицы roles, поле id)
+--- id. Serial  primary key,
+--- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
+--- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
 --Наполнить таблицу roles_employee 40 строками:
 
-CREATE TABLE roles_employee(
-	   id SERIAL PRIMARY KEY,
-	   employee_id int NOT NULL UNIQUE,
-	   role_id int NOT NULL,
-	   FOREIGN KEY (employee_id)
-	   REFERENCES employees(id),
-	   FOREIGN KEY (role_id)
-	   REFERENCES roles(id)
+create table roles_employee(
+	    id serial primary key,
+	   employee_id int not null unique,
+	   role_id int not null,
+	   foreign key (employee_id)
+	   references employees(id),
+	   foreign key (role_id)
+	   references roles(id)
 	  );
 	 
-INSERT INTO roles_employee(employee_id, role_id)
-VALUES     (1, 20),
+insert into roles_employee(employee_id, role_id)
+values (1, 20),
 	   (2, 19),
 	   (3, 18),
 	   (4, 17),
@@ -280,3 +277,8 @@ VALUES     (1, 20),
 	   (39, 19),
 	   (40, 15);
 	   			
+	  
+	  select e.employee_name, r.role_name from employees as e left join roles_employee as re
+	  on e.id = re.employee_id
+	  left join roles as r on re.role_id = r.id;
+	
