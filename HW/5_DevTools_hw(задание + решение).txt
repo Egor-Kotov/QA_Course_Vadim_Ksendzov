@@ -2,7 +2,7 @@ Devtools HW
 Сделать скрин видео выполнения сценария.
 
 Ссылка на видео выполнения др:
-https://drive.google.com/file/d/1nAHjiZNvPPl4DNCPsYbgPQR44d4c9V1Z/view?usp=sharing
+https://disk.yandex.ru/i/sY9_quILQvAupA
 
 Сценарии:
 начинаем с сайта http://itcareer.pythonanywhere.com/
