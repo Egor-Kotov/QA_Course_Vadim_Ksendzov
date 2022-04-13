@@ -1,8 +1,7 @@
 Devtools HW
 Сделать скрин видео выполнения сценария.
 
-Ссылка на видео выполнения др:
-https://disk.yandex.ru/i/sY9_quILQvAupA
+[ССЫЛКА НА ВЫПОЛНЕНИЕ ДР](https://disk.yandex.ru/i/sY9_quILQvAupA)
 
 Сценарии:
 начинаем с сайта http://itcareer.pythonanywhere.com/
